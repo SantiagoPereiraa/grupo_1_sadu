@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras</title>
+    <link rel="stylesheet" href="/css/compras.css">
+    <!-- icono de caja -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--carrito-->
+    <div class="bolsa">
+        <h2 class="titulo-bolsa">Tus compras</h2>
+        <!--contenedor de carrito-->
+        <div class="contenedor-carrito">
+
+        <div class="caja-carrito">
+            <img src="images/Camisa.png" alt="" class="carrito-imagen">
+            <div class="caja-detalles">
+                <div class="titulo-carrito-productos">Camisa</div>
+                <div class="precio-carrito">$80</div>
+                <input type="number" value="1" class="cantidad-carrito">
+            </div>
+            <!--quitar del carrito-->
+            <i class='bx bxs-trash-alt quitar-del-carrito' ></i>
+        </div>
+       </div>
+       <!--total-->
+       <div class="total">
+        <div class="titulo-total">Total</div>
+        <div class="precio-total">$0</div>
+       </div>
+       <!--boton comprar-->
+       <button type="button" class="boton-compra">Comprar</button>
+       <!--cerrar carrito-->
+       <i class='bx bx-x' id="cerrar-carrito"></i>
+    </div>
+    <section>
+        <div class="Banner-informacion">
+            <img src="/images/banner info.jpg" alt="" class="banner-info">
+        </div>
+    </section>
+</body>
+
+<footer>
+    <%- include('./partials/footer')%>
+</footer>
+<!--<script src="app.js"></script> -->
+</html>

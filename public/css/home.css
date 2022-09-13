@@ -1,0 +1,210 @@
+/*google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@100&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+:root {
+    --main-color: #fd4664;
+    --text-color: #171427;
+    --bg--color: #fff;
+}
+img{
+    width: 100%;
+}
+body{
+    color: var(--text-color);
+}
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+section{
+    padding: 4rem 0 3rem;
+}
+/* HEADER*/
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg--color);
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+    z-index: 100;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 ;
+}
+
+#lupa-busqueda{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+#Login{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+#Closet-productos{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color:var(--text-color);
+    font-weight: 400;
+}
+#bolsa-compras{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/*compra-content*/
+.compra-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+}
+.producto-caja{
+    position: relative;
+}
+.producto-caja:hover{
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: 0.4s;
+}
+.producto-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+.producto-tittle{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.Precio{
+    font-weight: 500;
+}
+.agregar-al-carrito{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    background: var(--text-color);
+    color: var(--bg--color);
+    padding: 10px;
+    cursor: pointer;
+}
+.agregar-al-carrito:hover{
+    background: hsl(249,32%,17%);
+}
+
+
+
+.container-2{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #fff;
+}
+.navegacion{
+    position: fixed;
+    inset: 20px 0 20px 20px;
+    width: 75px;
+    min-height: 500px;
+    background-color: #fff;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navegacion.open{
+    width: 250px;
+}
+.navegacion.menu-toogle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    border-bottom: #fd4664;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+}
+.navegacion.menu-toogle::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(-8px);
+    transition: 0.5s;
+} 
+.navegacion.menu-toogle::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(8px);
+    transition: 0.5s;
+    box-shadow: 0 -8px 0 #fff;
+}
+
+.navegacion.open .navegacion.menu-toogle::after{
+    transform: translateY(0); rotate:(-45deg);
+    box-shadow: none;
+}
+.navegacion ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.navegacion ul li{
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.navegacion ul li.active{
+transform: translateX(30px);
+}
+.navegacion ul li.active{
+    transform: translateX(10px);
+}
+
+.navegacion ul li a {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+}
