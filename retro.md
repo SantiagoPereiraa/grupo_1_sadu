@@ -11,3 +11,5 @@ Retrospectiva SPRINT 7:
 Dificultades: Validaciones del back end
 
 Facilidades: Validaciones del front end
+
+Tablero de trabajo: https://trello.com/b/TBidA6hC/sadu-e-comerce
